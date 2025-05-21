@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WhatsApp QR Auth</title>
+  </head>
+  <body>
+    <h2>Scan the QR code with WhatsApp</h2>
+    <img id="qr" alt="QR Code" />
+    <script>
+      async function fetchQr() {
+        const res = await fetch('/api/whatsapp/auth');
+        const data = await res.json();
+        console.log(data);
+        if (data.qrImage) {
+          document.getElementById('qr').src = data.qrImage;
+        } else {
+          document.getElementById('qr').alt = 'Waiting for QR...';
+        }
+      }
+      fetchQr();
+      setInterval(fetchQr, 30000); // Refresh QR every 5 seconds
+    </script>
+  </body>
+</html>

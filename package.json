@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp_api_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/App.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "mongoose": "^8.15.0",
+    "qrcode": "^1.5.4",
+    "whatsapp-web.js": "^1.28.0",
+    "wwebjs-mongo": "^1.1.0"
+  }
+}
