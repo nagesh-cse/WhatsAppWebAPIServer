@@ -50,7 +50,7 @@ A Node.js Express server that provides a REST API for WhatsApp group management 
     ```Here is a catch, The client will be initialized only when User hit `/api/whatsapp/auth` endpoint.```
 
 6. **Access the QR code page:**
-   - Open [http://localhost:PORT/index.html](replace `PORT` with your configured port).
+   - Open `[http://localhost:PORT/index.html]`(replace `PORT` with your configured port).
 
 ## Usage
 
