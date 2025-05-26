@@ -9,16 +9,16 @@ let clientReady = false;
 async function initWhatsAppClient() {
   if (clientInstance) return { clientInstance, getQr, isReady };
 
-  const store = new MongoStore({
-    mongoose: mongoose,
-  });
+  // const store = new MongoStore({
+  //   mongoose: mongoose,
+  // });
 
   const whatsappclient = new Client({
-    authStrategy: new RemoteAuth({
-      clientId: "client-one",
-      store: store,
-      backupSyncIntervalMs: 300000,
-    }),
+    // authStrategy: new RemoteAuth({
+    //   clientId: "client-one",
+    //   // store: store,
+    //   backupSyncIntervalMs: 300000,
+    // }),
     puppeteer: {
       headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],

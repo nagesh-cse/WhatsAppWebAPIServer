@@ -22,7 +22,7 @@ router.get("/auth", async (req, res) => {
   try {
     const { clientInstance } = await initWhatsAppClient();
 
-    if (clientInstance) {
+    if (!clientInstance) {
       return res.json({ status: "authenticated" });
     }
     const qr = getQr();
